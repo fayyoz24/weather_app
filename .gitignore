@@ -1,0 +1,14 @@
+venv/
+env/
+.env
+__pycache__/
+media/
+staticfiles/
+static/
+db.sqlite3
+urls.txt
+test_model.ipynb
+test_model_1.py
+test.ipynb
+notes.txt
+test.json
