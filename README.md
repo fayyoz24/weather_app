@@ -19,12 +19,12 @@ A comprehensive weather application built with Django that provides accurate wea
 - **✅ Statistics API**: API endpoints showing search statistics and popular cities
 
 ### Additional Features
-- **✅ Responsive Design**: Modern, mobile-friendly UI
+
 - **✅ Session-based Users**: Anonymous user tracking via sessions
 - **✅ Detailed Weather Data**: Current weather, hourly, and 7-day forecasts
 - **✅ Admin Interface**: Django admin for data management
 - **✅ API Documentation**: RESTful API with proper error handling
-- **✅ Production Ready**: Nginx, PostgreSQL, proper logging
+
 
 ## 🛠️ Technologies Used
 
@@ -33,11 +33,6 @@ A comprehensive weather application built with Django that provides accurate wea
 - **Django REST Framework** - API development
 - **PostgreSQL** - Database
 - **Open-Meteo API** - Weather data source
-
-### Frontend
-- **HTML5/CSS3** - Modern responsive design
-- **JavaScript (ES6+)** - Interactive features
-- **Axios** - HTTP client for API calls
 
 ### DevOps & Deployment
 - **Docker & Docker Compose** - Containerization
@@ -113,29 +108,18 @@ weather_project/
    createdb weather_db
    ```
 
-3. **Configure environment variables**:
-   ```bash
-   export DB_NAME=weather_db
-   export DB_USER=postgres
-   export DB_PASSWORD=your_password
-   export DB_HOST=localhost
-   export DB_PORT=5432
-   export SECRET_KEY=your-secret-key
-   export DEBUG=True
-   ```
-
-4. **Run migrations**:
+3. **Run migrations**:
    ```bash
    python manage.py migrate
    python manage.py createsuperuser
    ```
 
-5. **Run the development server**:
+4. **Run the development server**:
    ```bash
    python manage.py runserver
    ```
 
-6. **Access the application**: http://localhost:8000
+5. **Access the application**: http://localhost:8000
 
 ## 🧪 Running Tests
 
@@ -207,21 +191,11 @@ curl -X POST http://localhost:8000/api/weather/ \
 
 ## 🔧 Configuration
 
-### Environment Variables
-- `SECRET_KEY` - Django secret key
-- `DEBUG` - Debug mode (True/False)
-- `DB_NAME` - Database name
-- `DB_USER` - Database user
-- `DB_PASSWORD` - Database password
-- `DB_HOST` - Database host
-- `DB_PORT` - Database port
-- `ALLOWED_HOSTS` - Comma-separated allowed hosts
 
 ### Docker Configuration
 The application uses a multi-container setup:
 - **web**: Django application with Gunicorn
 - **db**: PostgreSQL database
-- **nginx**: Reverse proxy and static file serving
 
 ## 📊 Database Schema
 
@@ -238,9 +212,3 @@ The application uses a multi-container setup:
   - user, city (foreign keys)
   - search_count (number of searches)
   - last_searched (timestamp)
-
-## 🔍 Monitoring & Logging
-
-- **Health Check**: `/api/health/` endpoint for monitoring
-- **Comprehensive Logging**: File and console logging
-- **
